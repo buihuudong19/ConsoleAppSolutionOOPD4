@@ -32,6 +32,9 @@ namespace ConsoleAppStructureProgramming
 
             AddArray(ref arrayData, 20);
             PrintArray(arrayData);
+            Console.WriteLine("===============================");
+            arrayData = RemoveArray(arrayData, 2);
+            PrintArray(arrayData);
 
         }
 
@@ -130,7 +133,28 @@ namespace ConsoleAppStructureProgramming
             temp[temp.Length-1] = x;
             //3. Thay đổi mảng data
             data = temp;
-
+        }
+        //Remove 1 phan tu tai vi tri p nao do
+        /// <summary>
+        /// This function remove a element in the array...
+        /// </summary>
+        /// <param name="data"></param>
+        /// <param name="p"></param>
+        /// <returns>Xóa một phần tử ở vị trí p cho trước</returns>
+        static int[] RemoveArray(int[] data, int p)
+        {
+            int[] temp = new int[data.Length - 1];
+            if (p < 0 || p >= data.Length)
+                return data;
+            //"xô" từ vị trị p + 1 --> p
+            for(int i = p; i<data.Length-1; i++)
+            {
+                data[i] = data[i + 1];
+            }
+            //copy tu mang data với length - 1 --> temp
+            Array.Copy(data, 0, temp, 0, data.Length - 1);
+            // return temp
+            return temp;
         }
     }
 }
