@@ -35,7 +35,9 @@ namespace ConsoleAppStructureProgramming
             Console.WriteLine("===============================");
             arrayData = RemoveArray(arrayData, 2);
             PrintArray(arrayData);
-
+            UpdateArray(ref arrayData, 4, 100);
+            Console.WriteLine("===============================");
+            PrintArray(arrayData);
         }
 
         /*
@@ -155,6 +157,13 @@ namespace ConsoleAppStructureProgramming
             Array.Copy(data, 0, temp, 0, data.Length - 1);
             // return temp
             return temp;
+        }
+        static void UpdateArray(ref int[] data,int p, int x)
+        {
+            if(!(p < 0 || p >= data.Length))
+            {
+                data[p] = x;
+            }
         }
     }
 }
