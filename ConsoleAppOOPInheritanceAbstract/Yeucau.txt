@@ -1,0 +1,9 @@
+﻿Lập trình bằng C# thực hiện các yêu cầu quản lý Sinh viên 
+(Id, FullName, Dob, Mark)
+Viết chương trình thực hiện các chức năng sau:
+- Cho phép chương trình nhập n sinh viên
+- In toàn bộ sinh viên vừa nhập ra màn hình
+- Tìm một sinh viên theo mã SV
+- Có thể xóa/sửa một sinh viên theo mã.
+
+

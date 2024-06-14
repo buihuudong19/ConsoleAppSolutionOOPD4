@@ -150,9 +150,7 @@ namespace ConsoleAppStructureProgramming
                 return data;
             //"xô" từ vị trị p + 1 --> p
             for(int i = p; i<data.Length-1; i++)
-            {
                 data[i] = data[i + 1];
-            }
             //copy tu mang data với length - 1 --> temp
             Array.Copy(data, 0, temp, 0, data.Length - 1);
             // return temp
@@ -161,9 +159,7 @@ namespace ConsoleAppStructureProgramming
         static void UpdateArray(ref int[] data,int p, int x)
         {
             if(!(p < 0 || p >= data.Length))
-            {
                 data[p] = x;
-            }
         }
     }
 }
